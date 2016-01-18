@@ -21,7 +21,7 @@ module.exports = React.createClass({
     return (
       <Image
         style={styles.bg}
-        source={require('../img/launch-bg.png')} >
+        source={require('../img/launch-bg2.png')} >
         <View style={styles.container}>
           <View style={[styles.logoTop, this.border('red')]}>
             <Image
