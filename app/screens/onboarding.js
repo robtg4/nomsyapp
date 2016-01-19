@@ -6,7 +6,7 @@ var { Text, Image, View, StyleSheet} = React;
 module.exports = React.createClass({
   render: function() {
     return <View style={styles.container}>
-      <Text> Im the home screen</Text>
+      <Text> Im the onboarding screen</Text>
     </View>
   }
 });

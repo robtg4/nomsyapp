@@ -139,7 +139,7 @@ module.exports = React.createClass({
     );
   },
   onSignUpPress: function() {
-
+    this.props.navigator.push({name: 'onboarding'});
   },
   onExitPress: function() {
   this.refs.modal1.close();
@@ -197,7 +197,7 @@ var styles = StyleSheet.create({
     padding: 10
   },
   inputModal: {
-    color: '#5d5d5d',
+    color: 'white',
     padding: 4, //gives us offset to border
     height: window.height/18,
     fontFamily: 'Avenir Next',

@@ -3,8 +3,9 @@
 var React = require('react-native');
 var { StyleSheet, Text, View, Component, Navigator } = React;
 //component pages
-Launch = require('./app/screens/launch');
-Home = require('./app/screens/home');
+var Launch = require('./app/screens/launch');
+var Home = require('./app/screens/home');
+var Onboarding = require('./app/screens/onboarding');
 //libraries
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
@@ -12,6 +13,7 @@ var ParseReact = require('parse-react/react-native');
 var ROUTES ={
 	launch: Launch,
 	home: Home,
+	onboarding: Onboarding,
 };
 
 module.exports = React.createClass({
