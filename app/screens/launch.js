@@ -1,11 +1,16 @@
 //launch page of app
 var React = require('react-native');
-var {View, Text, StyleSheet, Image, TextInput} = React;
+var {View, Text, StyleSheet, Image, TextInput, TouchableHighlight } = React;
 //window size
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
 //components
 ImageButton = require('../components/image-button');
+//libraries
+var Parse = require('parse/react-native');
+var ParseReact = require('parse-react/react-native');
+var Button = require('react-native-button');
+var Modal = require('react-native-modalbox');
 
 
 module.exports = React.createClass({
@@ -15,6 +20,11 @@ module.exports = React.createClass({
 			password: '',
 			errorMessage: '',
 			loadingCurrentUser: true,
+      isOpen: false,
+      isDisabled: false,
+      swipeToClose: true,
+      email: '',
+      confirmPassword: '',
 		};
 	},
   render: function() {
@@ -57,19 +67,94 @@ module.exports = React.createClass({
               placeholder={'password'}
               placeholderTextColor={'#5d5d5d'}
 							style={styles.input}
+              secureTextEntry={true}
 							value={this.state.password}
 							onChangeText={(text) => this.setState({password: text})} />
             <ImageButton
                 style={[styles.loginBtn, {marginTop: 20}]}
                 resizeMode={'contain'}
-                onPress={() => {}}
+                onPress={this.onSignInPress}
                 source={require('../img/sign-in-btn.png')}
                 textStyle={styles.signinText}
                 text={'connect with email'}/>
           </View>
+          <TouchableHighlight onPress={this.openModal1} underlayColor={'transparent'} >
+            <Text style={{fontFamily: 'Avenir Next', color: '5d5d5d', fontSize: 15, marginBottom: 10}}>Create an account?</Text>
+          </TouchableHighlight>
+          <Modal
+            backdropContent={  <Image style={styles.bg} source={require('../img/create-bg.png')} />}
+            backdropOpacity={0.5}
+            style={[styles.modal, styles.modal1]}
+            ref={"modal1"}
+            swipeToClose={this.state.swipeToClose}>
+            <ImageButton
+                style={[styles.xBtn, this.border('red')]}
+                resizeMode={'contain'}
+                onPress={this.onExitPress}
+                source={require('../img/x-btn.png')}/>
+            <View>
+              <Image
+                resizeMode={'contain'}
+                source={require('../img/launch-logo.png')}
+                style={[styles.logo]} />
+            </View>
+            <View style={[styles.createAccount, this.border('blue')]}>
+              <TextInput
+                placeholder={'email address'}
+                placeholderTextColor={'#5d5d5d'}
+                style={styles.inputModal}
+                value={this.state.username}
+                onChangeText={(text) => this.setState({email: text})} />
+              <TextInput
+                placeholder={'email address'}
+                placeholderTextColor={'#5d5d5d'}
+                style={styles.inputModal}
+                value={this.state.username}
+                onChangeText={(text) => this.setState({username: text})} />
+              <TextInput
+                placeholder={'password'}
+                placeholderTextColor={'#5d5d5d'}
+                style={styles.inputModal}
+                secureTextEntry={true}
+                value={this.state.password}
+                onChangeText={(text) => this.setState({password: text})} />
+              <TextInput
+                placeholder={'confrim password'}
+                placeholderTextColor={'#5d5d5d'}
+  							style={styles.inputModal}
+                secureTextEntry={true}
+  							value={this.state.password}
+  							onChangeText={(text) => this.setState({password: text})} />
+              <ImageButton
+                  style={[styles.loginBtn, {marginTop: 20}]}
+                  resizeMode={'contain'}
+                  onPress={this.onSignUpPress}
+                  source={require('../img/sign-in-btn.png')}
+                  textStyle={styles.signinText}
+                  text={'get started!'}/>
+            </View>
+          </Modal>
         </View>
       </Image>
     );
+  },
+  onSignUpPress: function() {
+
+  },
+  onExitPress: function() {
+  this.refs.modal1.close();
+  },
+  onSignInPress: function() {
+    Parse.User.logIn(this.state.username, this.state.password, {
+			  success: (user) => { this.props.navigator.immediatelyResetRouteStack([{ name: 'home'}]); },
+			  error: (data, error) => { this.setState({ errorMessage: error.message }); }
+		});
+  },
+  openModal1: function(id) {
+    this.refs.modal1.open();
+  },
+  toggleSwipeToClose: function() {
+    this.setState({swipeToClose: !this.state.swipeToClose});
   },
   border: function(color) {
 	    return {
@@ -80,6 +165,50 @@ module.exports = React.createClass({
 });
 
 var styles = StyleSheet.create({
+  createAccount: {
+    flex: 0.7,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: -100,
+    backgroundColor: 'transparent',
+  },
+  xBtn: {
+    flex: 0.3,
+    height:40,
+    width: 40,
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    marginLeft: window.width*0.80,
+    backgroundColor: 'transparent',
+  },
+  text: {
+    color: "black",
+    fontSize: 22
+  },
+  modal: {
+    height: window.height*0.95,
+    width: window.width*0.95,
+  },
+  btn: {
+    margin: 10,
+    backgroundColor: "#3B5998",
+    color: "white",
+    padding: 10
+  },
+  inputModal: {
+    color: '#5d5d5d',
+    padding: 4, //gives us offset to border
+    height: window.height/18,
+    fontFamily: 'Avenir Next',
+    borderWidth: 1,
+    borderColor: '#55C066',
+    backgroundColor: '#55C066',
+    borderRadius: 5, //round input box
+    margin: 2,
+    width: window.width/1.5,
+    alignSelf: 'center', //center yourself on form when you have fixed widths
+  },
   input: {
     color: '#5d5d5d',
 		padding: 4, //gives us offset to border
@@ -130,7 +259,7 @@ var styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    marginTop: (window.width/1.6)*0.30,
+    marginTop: (window.width/1.6)*0.20,
     justifyContent: 'flex-end',
     width: window.width/1.6,
     height: (481/816)*window.width/1.6,
