@@ -24,7 +24,7 @@ module.exports = React.createClass({
       isDisabled: false,
       swipeToClose: true,
       email: '',
-      confirmPassword: '',
+      passwordConfirmation: '',
 		};
 	},
   render: function() {
@@ -100,30 +100,31 @@ module.exports = React.createClass({
             </View>
             <View style={[styles.createAccount, this.border('blue')]}>
               <TextInput
-                placeholder={'email address'}
-                placeholderTextColor={'#5d5d5d'}
+                placeholder={'username'}
+                placeholderTextColor={'white'}
                 style={styles.inputModal}
                 value={this.state.username}
                 onChangeText={(text) => this.setState({email: text})} />
               <TextInput
                 placeholder={'email address'}
-                placeholderTextColor={'#5d5d5d'}
+                placeholderTextColor={'white'}
                 style={styles.inputModal}
-                value={this.state.username}
+                keyboardType={'email-address'}
+                value={this.state.email}
                 onChangeText={(text) => this.setState({username: text})} />
               <TextInput
                 placeholder={'password'}
-                placeholderTextColor={'#5d5d5d'}
+                placeholderTextColor={'white'}
                 style={styles.inputModal}
                 secureTextEntry={true}
                 value={this.state.password}
                 onChangeText={(text) => this.setState({password: text})} />
               <TextInput
                 placeholder={'confrim password'}
-                placeholderTextColor={'#5d5d5d'}
+                placeholderTextColor={'white'}
   							style={styles.inputModal}
                 secureTextEntry={true}
-  							value={this.state.password}
+  							value={this.state.passwordConfirmation}
   							onChangeText={(text) => this.setState({password: text})} />
               <ImageButton
                   style={[styles.loginBtn, {marginTop: 20}]}
@@ -139,7 +140,22 @@ module.exports = React.createClass({
     );
   },
   onSignUpPress: function() {
-    this.props.navigator.push({name: 'onboarding'});
+    if (this.state.password === this.state.passwordConfirmation && this.state.username != null && this.state.email != null)
+		{
+			var user = new Parse.User();
+				user.set("username", this.state.username);
+				user.set("password", this.state.password);
+        user.set("email", this.state.email);
+
+				user.signUp(null, {
+				  //navigate to new component (.immediatelyResetRouteStack)
+				  //when doing so and we pass new views of app (routes)
+				  success: (user) => { this.props.navigator.immediatelyResetRouteStack([{ name: 'onboarding'}]); },
+				  error: (user, error) => { this.setState({ errorMessage: error.message }); }
+			});
+		} else {
+			this.setState({ errorMessage: "Your passwords are not the same!"});
+		}
   },
   onExitPress: function() {
   this.refs.modal1.close();
