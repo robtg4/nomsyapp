@@ -50,15 +50,16 @@ module.exports = React.createClass({
             <ImageButton
                 style={[styles.loginBtn]}
                 resizeMode={'contain'}
-                onPress={() => {}}
+                onPress={() => {this.props.navigator.push({name: 'onboarding'});}}
                 source={require('../img/gmail-btn.png')}
                 textStyle={styles.loginText}
                 text={'connect with google'}/>
             <Text style={{fontFamily: 'Avenir Next', color: '5d5d5d', fontSize: 15}}>or</Text>
           </View>
           <View style={[styles.loginInput, this.border('orange')]}>
+            <Text style={{fontFamily: 'Avenir Next', color: 'red', fontSize: 15, fontWeight: '200'}}>{this.state.errorMessage}</Text>
             <TextInput
-              placeholder={'email address'}
+              placeholder={'username'}
               placeholderTextColor={'#5d5d5d'}
 							style={styles.input}
 							value={this.state.username}
@@ -104,14 +105,14 @@ module.exports = React.createClass({
                 placeholderTextColor={'white'}
                 style={styles.inputModal}
                 value={this.state.username}
-                onChangeText={(text) => this.setState({email: text})} />
+                onChangeText={(text) => this.setState({username: text})} />
               <TextInput
                 placeholder={'email address'}
                 placeholderTextColor={'white'}
                 style={styles.inputModal}
                 keyboardType={'email-address'}
                 value={this.state.email}
-                onChangeText={(text) => this.setState({username: text})} />
+                onChangeText={(text) => this.setState({email: text})} />
               <TextInput
                 placeholder={'password'}
                 placeholderTextColor={'white'}
@@ -125,7 +126,7 @@ module.exports = React.createClass({
   							style={styles.inputModal}
                 secureTextEntry={true}
   							value={this.state.passwordConfirmation}
-  							onChangeText={(text) => this.setState({password: text})} />
+  							onChangeText={(text) => this.setState({passwordConfirmation: text})} />
               <ImageButton
                   style={[styles.loginBtn, {marginTop: 20}]}
                   resizeMode={'contain'}
@@ -162,9 +163,15 @@ module.exports = React.createClass({
   },
   onSignInPress: function() {
     Parse.User.logIn(this.state.username, this.state.password, {
-			  success: (user) => { this.props.navigator.immediatelyResetRouteStack([{ name: 'home'}]); },
-			  error: (data, error) => { this.setState({ errorMessage: error.message }); }
-		});
+      success: (user) => {
+        console.log('Successful Sign in!');
+        this.props.navigator.immediatelyResetRouteStack([{ name: 'home'}]);
+      },
+      error: (data, error) => {
+        console.log('Unsuccessful Sign in!');
+        this.setState({ errorMessage: error.message });
+      }
+  });
   },
   openModal1: function(id) {
     this.refs.modal1.open();
