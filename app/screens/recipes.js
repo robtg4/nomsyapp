@@ -19,6 +19,7 @@ module.exports = React.createClass({
         postTime={'2 hours ago'}
         onPress={() => {}}
         key={1}
+        upvotes={132}
         username={'Nancy Gilbert'}
         category={'Spciy'}
         categoryPress={() => {}} />
@@ -29,6 +30,7 @@ module.exports = React.createClass({
         postTime={'30 minutes ago'}
         onPress={() => {}}
         key={2}
+        upvotes={13}
         category={'Fruity'}
         username={'Bryana Luc'}
         categoryPress={() => {}} />
@@ -39,6 +41,7 @@ module.exports = React.createClass({
         postTime={'just now'}
         onPress={() => {}}
         key={3}
+        upvotes={85}
         category={'Healthy'}
         username={'Chelsea Scott'}
         categoryPress={() => {}} />
@@ -49,6 +52,7 @@ module.exports = React.createClass({
         postTime={'2 minutes ago'}
         onPress={() => {}}
         key={4}
+        upvotes={100}
         username={'Sarah C'}
         category={'Vegan Desserts'}
         categoryPress={() => {}} />

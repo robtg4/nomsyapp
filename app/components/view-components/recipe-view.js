@@ -35,23 +35,31 @@ module.exports = React.createClass({
               <View style={[styles.container, this.border('organge')]}>
                   <View style={[styles.header, this.border('blue')]}>
                       <Text style={[styles.previewText]}>{this.props.text}</Text>
+                      <View style={{flexDirection: 'row', justifyContent: 'space-around', flex: 1}}>
+                        <Icon
+                          name='ion|android-favorite-outline'
+                          size={30}
+                          color='#55C066'
+                          style={[styles.arrows, this.border('blue')]} />
+                        <Icon
+                          name='ion|chatbubble-working'
+                          size={30}
+                          color='#55C066'
+                          style={[styles.arrows, this.border('blue')]} />
+                      </View>
                   </View>
                   <View style={[styles.footer, this.border('white')]}>
                     <View style={[styles.sourceRow, this.border('blue')]}>
-                        <View style={[this.border('white')]}>
+                        <View style={[this.border('white'), {flex: 3}]}>
                           <Text style={[styles.rowText]}>{this.props.postTime}</Text>
                         </View>
-                        <View style={{flexDirection: 'row'}}>
+                        <View style={[this.border('white'), {flex: 1, flexDirection:'row'}]}>
                           <Icon
-                            name='ion|arrow-up-b'
-                            size={30}
+                            name='ion|heart'
+                            size={20}
                             color='#55C066'
-                            style={[styles.arrows, this.border('blue')]} />
-                          <Icon
-                            name='ion|arrow-down-b'
-                            size={30}
-                            color='#55C066'
-                            style={[styles.arrows, this.border('blue')]} />
+                            style={{width: 20, height: 20}} />
+                          <Text style={[styles.rowText]}>{this.props.upvotes} likes</Text>
                         </View>
                     </View>
                   </View>
@@ -102,7 +110,7 @@ var styles = StyleSheet.create({
   rowText: {
     textAlign: 'left',
     color: 'black',
-    fontSize: 12,
+    fontSize: 15,
     marginLeft: 5,
     fontFamily: 'Avenir Next',
   },
@@ -156,6 +164,7 @@ var styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     marginTop: window.height/60,
+    flexDirection: 'row',
   },
   footer: {
     flex: 1,
@@ -182,6 +191,7 @@ var styles = StyleSheet.create({
     textAlign: 'left',
     marginTop: 2,
     marginLeft: 5,
+    flex: 3,
   },
 
 });
