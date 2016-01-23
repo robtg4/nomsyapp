@@ -27,7 +27,7 @@ module.exports = React.createClass({
               </View>
               <TouchableHighlight
                 underlayColor={'transparent'}
-                onPress={this.props.onPres}>
+                onPress={this.props.onPress}>
                 <Image
                   source={this.props.source}
                   style={[styles.articlePreview, this.border('red')]} />
@@ -36,16 +36,24 @@ module.exports = React.createClass({
                   <View style={[styles.header, this.border('blue')]}>
                       <Text style={[styles.previewText]}>{this.props.text}</Text>
                       <View style={{flexDirection: 'row', justifyContent: 'space-around', flex: 1}}>
-                        <Icon
-                          name='ion|android-favorite-outline'
-                          size={30}
-                          color='#55C066'
-                          style={[styles.arrows, this.border('blue')]} />
-                        <Icon
-                          name='ion|chatbubble-working'
-                          size={30}
-                          color='#55C066'
-                          style={[styles.arrows, this.border('blue')]} />
+                        <TouchableHighlight
+                          underlayColor={'transparent'}
+                          onPress={this.props.onPressFave}>
+                          <Icon
+                            name='ion|android-favorite-outline'
+                            size={30}
+                            color='#55C066'
+                            style={[styles.arrows, this.border('blue')]} />
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                          underlayColor={'transparent'}
+                          onPress={this.props.onPressComments}>
+                          <Icon
+                            name='ion|chatbubble-working'
+                            size={30}
+                            color='#55C066'
+                            style={[styles.arrows, this.border('blue')]} />
+                        </TouchableHighlight>
                       </View>
                   </View>
                   <View style={[styles.footer, this.border('white')]}>

@@ -17,8 +17,10 @@ module.exports = React.createClass({
         text={'Spicy Lamb Albondigas Meatballs'}
         src={{ uri: 'http://img.auctiva.com/imgdata/1/5/5/2/3/3/3/webimg/538725353_o.jpg'}}
         postTime={'2 hours ago'}
-        onPress={() => {}}
+        onPress={this.recipeDetails}
         key={1}
+        onPressFave={() => {}}
+        onPressComments={() => {}}
         upvotes={132}
         username={'Nancy Gilbert'}
         category={'Spciy'}
@@ -28,8 +30,10 @@ module.exports = React.createClass({
         text={'Fruits & Crackers'}
         src={{uri: 'https://s3.amazonaws.com/webassets.ticketmob.com/LS/images/comedians/Jodi_White_color.jpg'}}
         postTime={'30 minutes ago'}
-        onPress={() => {}}
+        onPress={this.recipeDetails}
         key={2}
+        onPressFave={() => {}}
+        onPressComments={() => {}}
         upvotes={13}
         category={'Fruity'}
         username={'Bryana Luc'}
@@ -39,8 +43,10 @@ module.exports = React.createClass({
         text={'Chicken, Rice, & Avocado Salad'}
         src={{uri: 'http://www.melskitchencafe.com/wp-content/uploads/website-profile-pic2.jpg'}}
         postTime={'just now'}
-        onPress={() => {}}
+        onPress={this.recipeDetails}
         key={3}
+        onPressFave={() => {}}
+        onPressComments={() => {}}
         upvotes={85}
         category={'Healthy'}
         username={'Chelsea Scott'}
@@ -50,14 +56,19 @@ module.exports = React.createClass({
         text={'Fruit Yogurt'}
         src={{uri: 'http://img.auctiva.com/imgdata/1/5/5/2/3/3/3/webimg/538725353_o.jpg'}}
         postTime={'2 minutes ago'}
-        onPress={() => {}}
+        onPress={this.recipeDetails}
         key={4}
+        onPressFave={() => {}}
+        onPressComments={() => {}}
         upvotes={100}
         username={'Sarah C'}
         category={'Vegan Desserts'}
         categoryPress={() => {}} />
     </View>
-  }
+  },
+  recipeDetails: function() {
+    this.props.navigator.push({name: 'recipedetails'});
+  },
 });
 
 var styles = StyleSheet.create({

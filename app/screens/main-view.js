@@ -10,6 +10,7 @@ var Explore = require('./explore');
 var Home = require('./home');
 var Recipes = require('./recipes');
 var Profile = require('./profile');
+var RecipePhoto = require('./recipe-photo.js')
 //dimensions
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
@@ -19,13 +20,16 @@ module.exports = React.createClass({
     return <View style={styles.container}>
         <ScrollableTabView
           tabBarPosition={'bottom'}
-          initialPage={2}
+          initialPage={0}
           renderTabBar={() => <TabBar />}>
           <ScrollView tabLabel="ion|android-home">
             <Home navigator={this.props.navigator} />
           </ScrollView>
           <ScrollView tabLabel="ion|android-list">
             <Recipes navigator={this.props.navigator} />
+          </ScrollView>
+          <ScrollView tabLabel="ion|android-camera">
+            <RecipePhoto navigator={this.props.navigator} />
           </ScrollView>
           <ScrollView tabLabel="ion|search">
             <Explore navigator={this.props.navigator} />

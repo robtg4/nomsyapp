@@ -7,6 +7,7 @@ var Launch = require('./app/screens/launch');
 var Home = require('./app/screens/main-view');
 var OnboardingDiets = require('./app/screens/onboarding-diets');
 var OnboardingTastes = require('./app/screens/onboarding-tastes');
+var RecipeDetails = require('./app/screens/recipe-details');
 //libraries
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
@@ -16,6 +17,7 @@ var ROUTES ={
 	home: Home,
 	onboardingdiets: OnboardingDiets,
 	onboardingtastes: OnboardingTastes,
+	recipedetails: RecipeDetails,
 };
 
 module.exports = React.createClass({
