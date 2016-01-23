@@ -33,6 +33,13 @@
 	<array>
 		<string>Avenir Next.ttc</string>
 		<string>Avenir.ttc</string>
+		<string>octicons.ttf</string>
+		<string>FontAwesome.otf</string>
+		<string>foundation-icons.ttf</string>
+		<string>ionicons.ttf</string>
+		<string>Material-Design-Iconic-Font.ttf</string>
+		<string>typicons.ttf</string>
+		<string>zocial.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -41,7 +48,7 @@
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarHidden</key>
-	<true/>
+	<false/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>

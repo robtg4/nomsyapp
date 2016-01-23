@@ -1,15 +1,15 @@
-//home page that connects everything together in app index
+//profile page
 var React = require('react-native');
 var { Text, Image, View, StyleSheet} = React;
-//window size
+//libraries
+//dimensions
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
-//libraries
 
 module.exports = React.createClass({
   render: function() {
     return <View style={styles.container}>
-      <Text> Im the home screen</Text>
+      <Text> Im the profile screen</Text>
     </View>
   }
 });

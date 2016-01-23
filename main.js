@@ -4,8 +4,9 @@ var React = require('react-native');
 var { StyleSheet, Text, View, Component, Navigator } = React;
 //component pages
 var Launch = require('./app/screens/launch');
-var Home = require('./app/screens/home');
-var Onboarding = require('./app/screens/onboarding');
+var Home = require('./app/screens/main-view');
+var OnboardingDiets = require('./app/screens/onboarding-diets');
+var OnboardingTastes = require('./app/screens/onboarding-tastes');
 //libraries
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
@@ -13,7 +14,8 @@ var ParseReact = require('parse-react/react-native');
 var ROUTES ={
 	launch: Launch,
 	home: Home,
-	onboarding: Onboarding,
+	onboardingdiets: OnboardingDiets,
+	onboardingtastes: OnboardingTastes,
 };
 
 module.exports = React.createClass({

@@ -1,15 +1,16 @@
-//home page that connects everything together in app index
+//recipe page
 var React = require('react-native');
 var { Text, Image, View, StyleSheet} = React;
+//libraries
+var NavigationBar = require('react-native-navbar');
 //window size
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
-//libraries
 
 module.exports = React.createClass({
   render: function() {
     return <View style={styles.container}>
-      <Text> Im the home screen</Text>
+      <Text> Im the recipes screen</Text>
     </View>
   }
 });

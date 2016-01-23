@@ -30,8 +30,8 @@ module.exports = React.createClass({
         </Image>
       </View>
       <View style={styles.footer}>
-        <Text style={[styles.instructions]}>Help us get to know your dietary restrictions.</Text>
-          <View style={[styles.options]}>
+          <Text style={[styles.instructions, this.border('red')]}>Help us get to know your dietary restrictions.</Text>
+          <View style={[styles.options, this.border('red')]}>
             <KeywordBox
               source={require('../img/buttons/dairy-free.png')}
               text={'Dairy Free'}
@@ -89,18 +89,44 @@ module.exports = React.createClass({
               selected={this.state.glutenfree}
               onPress={() => {this.setState({glutenfree: !this.state.glutenfree})}} />
           </View>
-      </View>
+          <View style={{flex: 1, width: window.width}}>
+            <ImageButton
+                style={[styles.nextBtn, this.border('red')]}
+                resizeMode={'contain'}
+                onPress={this.onNextPress}
+                source={require('../img/next-btn.png')}
+                textStyle={styles.nextText}
+                text={'next'}/>
+          </View>
+        </View>
     </View>
+  },
+  onNextPress: function() {
+    this.props.navigator.push({name: 'onboardingtastes'});
   },
   border: function(color) {
 	    return {
-	      borderColor: color,
-	      borderWidth: 2,
+	      //borderColor: color,
+	      //borderWidth: 2,
 	    }
 	 },
 });
 
 var styles = StyleSheet.create({
+  nextText: {
+    fontSize: 20,
+    color: 'white',
+    fontFamily: 'Avenir Next',
+    alignSelf: 'center',
+  },
+  nextBtn: {
+    width: window.width/1.6,
+    height:(156/739)*window.width/1.6,
+    margin: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
   keywordImage: {
     width: window.width/5,
     height: window.width/5,
@@ -134,7 +160,7 @@ var styles = StyleSheet.create({
 		flexDirection:'row',
     justifyContent: 'center',
     width: window.width,
-    flex: 4,
+    flex: 1.7,
   },
   instructions: {
     fontFamily: 'Avenir Next',
@@ -146,13 +172,13 @@ var styles = StyleSheet.create({
     marginLeft: window.width/11,
     marginRight: window.width/11,
     marginTop: window.height/40,
-    flex: 1,
+    flex: 0.5,
   },
   header: {
-    flex: 1,
+    flex: 0.4,
   },
   footer: {
-    flex: 1,
+    flex: 0.6,
     flexDirection: 'column',
     alignItems: 'center',
   },

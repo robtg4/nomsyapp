@@ -50,7 +50,7 @@ module.exports = React.createClass({
             <ImageButton
                 style={[styles.loginBtn]}
                 resizeMode={'contain'}
-                onPress={() => {this.props.navigator.push({name: 'onboarding'});}}
+                onPress={() => {this.props.navigator.push({name: 'onboardingdiets'});}}
                 source={require('../img/gmail-btn.png')}
                 textStyle={styles.loginText}
                 text={'connect with google'}/>
@@ -151,7 +151,7 @@ module.exports = React.createClass({
 				user.signUp(null, {
 				  //navigate to new component (.immediatelyResetRouteStack)
 				  //when doing so and we pass new views of app (routes)
-				  success: (user) => { this.props.navigator.immediatelyResetRouteStack([{ name: 'onboarding'}]); },
+				  success: (user) => { this.props.navigator.immediatelyResetRouteStack([{ name: 'onboardingdiets'}]); },
 				  error: (user, error) => { this.setState({ errorMessage: error.message }); }
 			});
 		} else {

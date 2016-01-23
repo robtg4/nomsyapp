@@ -22,6 +22,14 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		885DFA331C530D09005D5E93 /* libReactNativeIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885DFA321C530CFD005D5E93 /* libReactNativeIcons.a */; };
+		885DFA3F1C530D40005D5E93 /* Material-Design-Iconic-Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA381C530D40005D5E93 /* Material-Design-Iconic-Font.ttf */; };
+		885DFA401C530D40005D5E93 /* typicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA391C530D40005D5E93 /* typicons.ttf */; };
+		885DFA411C530D40005D5E93 /* zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA3A1C530D40005D5E93 /* zocial.ttf */; };
+		885DFA461C530E64005D5E93 /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA421C530E64005D5E93 /* octicons.ttf */; };
+		885DFA471C530E64005D5E93 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA431C530E64005D5E93 /* FontAwesome.otf */; };
+		885DFA481C530E64005D5E93 /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA441C530E64005D5E93 /* foundation-icons.ttf */; };
+		885DFA491C530E64005D5E93 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA451C530E64005D5E93 /* ionicons.ttf */; };
 		88A700C91C4CA28E00B67FE7 /* Avenir Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 88A700C81C4CA28E00B67FE7 /* Avenir Next.ttc */; };
 		88A700CB1C4CA29800B67FE7 /* Avenir.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 88A700CA1C4CA29800B67FE7 /* Avenir.ttc */; };
 /* End PBXBuildFile section */
@@ -104,6 +112,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		885DFA311C530CFD005D5E93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885DFA231C530CFD005D5E93 /* ReactNativeIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F5A3EB81ACDBF8000439386;
+			remoteInfo = ReactNativeIcons;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +143,14 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		885DFA231C530CFD005D5E93 /* ReactNativeIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeIcons.xcodeproj; path = "../node_modules/react-native-icons/ios/ReactNativeIcons.xcodeproj"; sourceTree = "<group>"; };
+		885DFA381C530D40005D5E93 /* Material-Design-Iconic-Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Material-Design-Iconic-Font.ttf"; path = "../node_modules/react-native-icons/fonts/Material-Design-Iconic-Font.ttf"; sourceTree = "<group>"; };
+		885DFA391C530D40005D5E93 /* typicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = typicons.ttf; path = "../node_modules/react-native-icons/fonts/typicons.ttf"; sourceTree = "<group>"; };
+		885DFA3A1C530D40005D5E93 /* zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zocial.ttf; path = "../node_modules/react-native-icons/fonts/zocial.ttf"; sourceTree = "<group>"; };
+		885DFA421C530E64005D5E93 /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = octicons.ttf; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/octicons.ttf"; sourceTree = "<group>"; };
+		885DFA431C530E64005D5E93 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/FontAwesome.otf"; sourceTree = "<group>"; };
+		885DFA441C530E64005D5E93 /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		885DFA451C530E64005D5E93 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/ionicons.ttf"; sourceTree = "<group>"; };
 		88A700C81C4CA28E00B67FE7 /* Avenir Next.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir Next.ttc"; path = "../../../../../Volumes/Data/Users/robertgreenfield/Desktop/Nomsy App UI/Avenir Next.ttc"; sourceTree = "<group>"; };
 		88A700CA1C4CA29800B67FE7 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Avenir.ttc; path = ../../../../../System/Library/Fonts/Avenir.ttc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +171,7 @@
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				885DFA331C530D09005D5E93 /* libReactNativeIcons.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
@@ -266,6 +290,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				885DFA231C530CFD005D5E93 /* ReactNativeIcons.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -310,9 +335,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		885DFA241C530CFD005D5E93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				885DFA321C530CFD005D5E93 /* libReactNativeIcons.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		88A700BD1C4CA24D00B67FE7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				885DFA421C530E64005D5E93 /* octicons.ttf */,
+				885DFA431C530E64005D5E93 /* FontAwesome.otf */,
+				885DFA441C530E64005D5E93 /* foundation-icons.ttf */,
+				885DFA451C530E64005D5E93 /* ionicons.ttf */,
+				885DFA381C530D40005D5E93 /* Material-Design-Iconic-Font.ttf */,
+				885DFA391C530D40005D5E93 /* typicons.ttf */,
+				885DFA3A1C530D40005D5E93 /* zocial.ttf */,
 				88A700C81C4CA28E00B67FE7 /* Avenir Next.ttc */,
 				88A700CA1C4CA29800B67FE7 /* Avenir.ttc */,
 			);
@@ -425,6 +465,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 885DFA241C530CFD005D5E93 /* Products */;
+					ProjectRef = 885DFA231C530CFD005D5E93 /* ReactNativeIcons.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -505,6 +549,13 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		885DFA321C530CFD005D5E93 /* libReactNativeIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeIcons.a;
+			remoteRef = 885DFA311C530CFD005D5E93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -519,10 +570,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885DFA461C530E64005D5E93 /* octicons.ttf in Resources */,
+				885DFA471C530E64005D5E93 /* FontAwesome.otf in Resources */,
+				885DFA481C530E64005D5E93 /* foundation-icons.ttf in Resources */,
+				885DFA491C530E64005D5E93 /* ionicons.ttf in Resources */,
 				88A700CB1C4CA29800B67FE7 /* Avenir.ttc in Resources */,
+				885DFA411C530D40005D5E93 /* zocial.ttf in Resources */,
 				88A700C91C4CA28E00B67FE7 /* Avenir Next.ttc in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				885DFA3F1C530D40005D5E93 /* Material-Design-Iconic-Font.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				885DFA401C530D40005D5E93 /* typicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +692,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = nomsyapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = nomsyapp;
@@ -650,6 +709,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = nomsyapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = nomsyapp;
