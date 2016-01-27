@@ -3,7 +3,6 @@ var React = require('react-native');
 var { Text, Image, View, StyleSheet} = React;
 //libraries
 var NavigationBar = require('react-native-navbar');
-var SearchBar = require('react-native-search-bar');
 //window size
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
@@ -43,7 +42,7 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    width: window.width, 
+    width: window.width,
   },
   usernameText: {
     fontSize: 20,

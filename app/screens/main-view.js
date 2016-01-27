@@ -20,16 +20,10 @@ module.exports = React.createClass({
     return <View style={styles.container}>
         <ScrollableTabView
           tabBarPosition={'bottom'}
-          initialPage={0}
+          initialPage={1}
           renderTabBar={() => <TabBar />}>
-          <ScrollView tabLabel="ion|android-home">
-            <Home navigator={this.props.navigator} />
-          </ScrollView>
           <ScrollView tabLabel="ion|android-list">
             <Recipes navigator={this.props.navigator} />
-          </ScrollView>
-          <ScrollView tabLabel="ion|android-camera">
-            <RecipePhoto navigator={this.props.navigator} />
           </ScrollView>
           <ScrollView tabLabel="ion|search">
             <Explore navigator={this.props.navigator} />

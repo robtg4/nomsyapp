@@ -7,8 +7,14 @@ KeywordBox = require('../components/keyword-box');
 //window size
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
+//additional libraries
+var Parse = require('parse/react-native'); //parse for data storage
 
 module.exports = React.createClass({
+  componentWillMount: function() {
+		Parse.User.currentAsync()
+			.then((user) => { this.setState({user: user}); })
+	},
   getInitialState: function() {
 		return {
 			health: false,
@@ -18,6 +24,7 @@ module.exports = React.createClass({
       paleo: false,
       dairyfree: false,
       glutenfree: false,
+      user: null,
 		};
 	},
   render: function() {
@@ -102,7 +109,49 @@ module.exports = React.createClass({
     </View>
   },
   onNextPress: function() {
-    this.props.navigator.push({name: 'onboardingtastes'});
+      //array of chose words
+      var diets = [];
+			if (this.state.healh){
+        diets.push('health');
+      }
+      if (this.state.nutfree) {
+        diets.push('nutfree');
+      }
+      if  (this.state.vegan) {
+        diets.push('vegan');
+      }
+      if  (this.state.vegetarian) {
+        diets.push('vegetarian');
+      }
+      if  (this.state.paleo) {
+        diets.push('paleo');
+      }
+      if  (this.state.dairyfree) {
+        diets.push('dairyfree');
+      }
+      if (this.state.glutenfree) {
+        diets.push('glutenfree');
+      }
+
+      //test output
+      console.log(diets);
+
+      var that = this;
+      var Interests = Parse.Object.extend("Interests");
+			var user_words = new Interests();
+				user_words.set("userObjectId", { __type: "Pointer", className: "_User", objectId: that.state.user.id });
+				user_words.set("interests", diets);
+
+			//check for entry errors
+			user_words.save({
+			  success: function(user_words) {
+			    console.log("The save was successful.");
+			    that.props.navigator.push({name: 'onboardingtastes'});
+			  },
+			  error: function(user_words, error) {
+			    console.log(error);
+			  }
+			});
   },
   border: function(color) {
 	    return {

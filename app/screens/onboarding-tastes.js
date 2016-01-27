@@ -7,8 +7,15 @@ KeywordBox = require('../components/keyword-box');
 //window size
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
+//libraries
+var Parse = require('parse/react-native');
+var ParseReact = require('parse-react/react-native');
 
 module.exports = React.createClass({
+  componentWillMount: function() {
+		Parse.User.currentAsync()
+			.then((user) => { this.setState({user: user}); })
+	},
   getInitialState: function() {
 		return {
 			spicy: false,
@@ -17,6 +24,7 @@ module.exports = React.createClass({
       sour: false,
       bitter: false,
       fruity: false,
+      user: 'null',
 		};
 	},
   render: function() {
@@ -37,7 +45,7 @@ module.exports = React.createClass({
               textStyle={styles.keywordText}
               key={1}
               imageStyle={styles.keywordImage}
-              selected={this.state.dairyfree}
+              selected={this.state.spicy}
               onPress={() => {this.setState({spicy: !this.state.spicy})}} />
             <KeywordBox
               source={require('../img/buttons/sweet.png')}
@@ -45,7 +53,7 @@ module.exports = React.createClass({
               textStyle={styles.keywordText}
               key={2}
               imageStyle={styles.keywordImage}
-              selected={this.state.nutfree}
+              selected={this.state.sweet}
               onPress={() => {this.setState({sweet: !this.state.sweet})}} />
             <KeywordBox
               source={require('../img/buttons/salty.png')}
@@ -53,7 +61,7 @@ module.exports = React.createClass({
               textStyle={styles.keywordText}
               key={3}
               imageStyle={styles.keywordImage}
-              selected={this.state.vegetarian}
+              selected={this.state.salty}
               onPress={() => {this.setState({salty: !this.state.salty})}} />
             <KeywordBox
               source={require('../img/buttons/sour.png')}
@@ -61,7 +69,7 @@ module.exports = React.createClass({
               textStyle={styles.keywordText}
               key={4}
               imageStyle={styles.keywordImage}
-              selected={this.state.vegan}
+              selected={this.state.sour}
               onPress={() => {this.setState({sour: !this.state.sour})}} />
             <KeywordBox
               source={require('../img/buttons/bitter.png')}
@@ -69,7 +77,7 @@ module.exports = React.createClass({
               textStyle={styles.keywordText}
               key={5}
               imageStyle={styles.keywordImage}
-              selected={this.state.paleo}
+              selected={this.state.bitter}
               onPress={() => {this.setState({bitter: !this.state.bitter})}} />
             <KeywordBox
               source={require('../img/buttons/fruity.png')}
@@ -77,7 +85,7 @@ module.exports = React.createClass({
               imageStyle={styles.keywordImage}
               textStyle={styles.keywordText}
               key={6}
-              selected={this.state.health}
+              selected={this.state.fruity}
               onPress={() => {this.setState({fruity: !this.state.fruity})}} />
           </View>
           <View style={{flex: 1, width: window.width}}>
@@ -93,7 +101,43 @@ module.exports = React.createClass({
     </View>
   },
   onNextPress: function() {
-    this.props.navigator.push({name: 'home'});
+    //array of chose words
+    var tastes = [];
+    if (this.state.spciy){
+      tastes.push('spicy');
+    }
+    if (this.state.sweet) {
+      tastes.push('sweet');
+    }
+    if  (this.state.salty) {
+      tastes.push('salty');
+    }
+    if  (this.state.sour) {
+      tastes.push('sour');
+    }
+    if  (this.state.bitter) {
+      tastes.push('bitter');
+    }
+    if  (this.state.fruity) {
+      tastes.push('fruity');
+    }
+
+    var that = this;
+    var Tastes = Parse.Object.extend("Tastes");
+    var user_words = new Tastes();
+      user_words.set("userObjectId", { __type: "Pointer", className: "_User", objectId: that.state.user.id });
+      user_words.set("tastes", tastes);
+
+    //check for entry errors
+    user_words.save({
+      success: function(user_words) {
+        console.log("The save was successful.");
+        that.props.navigator.immediatelyResetRouteStack([{ name: 'home'}]);
+      },
+      error: function(user_words, error) {
+        console.log(error);
+      }
+    });
   },
   border: function(color) {
 	    return {

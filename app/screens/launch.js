@@ -6,11 +6,12 @@ var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
 //components
 ImageButton = require('../components/image-button');
+var Button = require('react-native-button');
+var Modal = require('react-native-modalbox');
 //libraries
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
-var Button = require('react-native-button');
-var Modal = require('react-native-modalbox');
+
 
 
 module.exports = React.createClass({
@@ -43,7 +44,7 @@ module.exports = React.createClass({
             <ImageButton
                 style={[styles.loginBtn]}
                 resizeMode={'contain'}
-                onPress={() => {}}
+                onPress={this.facebookSignIn}
                 source={require('../img/facebook-btn.png')}
                 textStyle={styles.loginText}
                 text={'connect with facebook'}/>
@@ -139,6 +140,9 @@ module.exports = React.createClass({
         </View>
       </Image>
     );
+  },
+  facebookSignIn: function() {
+
   },
   onSignUpPress: function() {
     if (this.state.password === this.state.passwordConfirmation && this.state.username != null && this.state.email != null)

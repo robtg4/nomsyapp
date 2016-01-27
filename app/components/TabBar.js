@@ -10,6 +10,9 @@ var {
 } = React;
 
 var { Icon, } = require('react-native-icons');
+//dimensions
+var Dimensions = require('Dimensions');
+var window = Dimensions.get('window');
 
 var styles = StyleSheet.create({
   tab: {
@@ -32,8 +35,10 @@ var styles = StyleSheet.create({
     width: 30,
     height: 30,
     position: 'absolute',
+    alignSelf: 'center',
+    justifyContent: 'center',
     top: 0,
-    left: 20,
+    left: window.width/10,
   },
 });
 

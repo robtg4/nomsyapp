@@ -30,10 +30,56 @@
 		885DFA471C530E64005D5E93 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA431C530E64005D5E93 /* FontAwesome.otf */; };
 		885DFA481C530E64005D5E93 /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA441C530E64005D5E93 /* foundation-icons.ttf */; };
 		885DFA491C530E64005D5E93 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 885DFA451C530E64005D5E93 /* ionicons.ttf */; };
-		885DFA501C531A0B005D5E93 /* libRNSearchBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885DFA4F1C531A02005D5E93 /* libRNSearchBar.a */; };
 		885DFA571C5343F1005D5E93 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885DFA561C5343EB005D5E93 /* libRCTCamera.a */; };
 		88A700C91C4CA28E00B67FE7 /* Avenir Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 88A700C81C4CA28E00B67FE7 /* Avenir Next.ttc */; };
 		88A700CB1C4CA29800B67FE7 /* Avenir.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 88A700CA1C4CA29800B67FE7 /* Avenir.ttc */; };
+		88EAA1641C5864D900E761F9 /* FBSDKShare.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1271C5864D800E761F9 /* FBSDKShare.ios.js */; };
+		88EAA1651C5864D900E761F9 /* RCTConvert+FBSDKSharingContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA12A1C5864D800E761F9 /* RCTConvert+FBSDKSharingContent.m */; };
+		88EAA1661C5864D900E761F9 /* RCTFBSDKAppGroupAddDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA12C1C5864D800E761F9 /* RCTFBSDKAppGroupAddDialog.m */; };
+		88EAA1671C5864D900E761F9 /* RCTFBSDKAppGroupJoinDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA12E1C5864D800E761F9 /* RCTFBSDKAppGroupJoinDialog.m */; };
+		88EAA1681C5864D900E761F9 /* RCTFBSDKAppInviteDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1301C5864D800E761F9 /* RCTFBSDKAppInviteDialog.m */; };
+		88EAA1691C5864D900E761F9 /* RCTFBSDKGameRequestDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1321C5864D800E761F9 /* RCTFBSDKGameRequestDialog.m */; };
+		88EAA16A1C5864D900E761F9 /* RCTFBSDKLikeControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1341C5864D800E761F9 /* RCTFBSDKLikeControlManager.m */; };
+		88EAA16B1C5864D900E761F9 /* RCTFBSDKMessageDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1361C5864D800E761F9 /* RCTFBSDKMessageDialog.m */; };
+		88EAA16C1C5864D900E761F9 /* RCTFBSDKSendButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1381C5864D800E761F9 /* RCTFBSDKSendButtonManager.m */; };
+		88EAA16D1C5864D900E761F9 /* RCTFBSDKShareAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA13A1C5864D800E761F9 /* RCTFBSDKShareAPI.m */; };
+		88EAA16E1C5864D900E761F9 /* RCTFBSDKShareButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA13C1C5864D800E761F9 /* RCTFBSDKShareButtonManager.m */; };
+		88EAA16F1C5864D900E761F9 /* RCTFBSDKShareDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA13E1C5864D800E761F9 /* RCTFBSDKShareDialog.m */; };
+		88EAA1701C5864D900E761F9 /* RCTFBSDKShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1401C5864D800E761F9 /* RCTFBSDKShareHelper.m */; };
+		88EAA1711C5864D900E761F9 /* RCTFBSDKShareInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1411C5864D800E761F9 /* RCTFBSDKShareInitializer.m */; };
+		88EAA1721C5864D900E761F9 /* FBSDKAppGroupAddDialog.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1431C5864D800E761F9 /* FBSDKAppGroupAddDialog.ios.js */; };
+		88EAA1731C5864D900E761F9 /* FBSDKAppGroupJoinDialog.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1441C5864D800E761F9 /* FBSDKAppGroupJoinDialog.ios.js */; };
+		88EAA1741C5864D900E761F9 /* FBSDKAppInviteDialog.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1451C5864D800E761F9 /* FBSDKAppInviteDialog.ios.js */; };
+		88EAA1751C5864D900E761F9 /* FBSDKGameRequestDialog.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1461C5864D800E761F9 /* FBSDKGameRequestDialog.ios.js */; };
+		88EAA1761C5864D900E761F9 /* FBSDKMessageDialog.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1471C5864D800E761F9 /* FBSDKMessageDialog.ios.js */; };
+		88EAA1771C5864D900E761F9 /* FBSDKShareAPI.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1481C5864D800E761F9 /* FBSDKShareAPI.ios.js */; };
+		88EAA1781C5864D900E761F9 /* FBSDKShareDialog.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1491C5864D800E761F9 /* FBSDKShareDialog.ios.js */; };
+		88EAA1791C5864D900E761F9 /* FBSDKShareTypes.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA14A1C5864D800E761F9 /* FBSDKShareTypes.ios.js */; };
+		88EAA17A1C5864D900E761F9 /* FBSDKAppGroupAddContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA14C1C5864D800E761F9 /* FBSDKAppGroupAddContent.ios.js */; };
+		88EAA17B1C5864D900E761F9 /* FBSDKAppInviteContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA14D1C5864D800E761F9 /* FBSDKAppInviteContent.ios.js */; };
+		88EAA17C1C5864D900E761F9 /* FBSDKGameRequestContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA14E1C5864D800E761F9 /* FBSDKGameRequestContent.ios.js */; };
+		88EAA17D1C5864D900E761F9 /* FBSDKShareLinkContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA14F1C5864D800E761F9 /* FBSDKShareLinkContent.ios.js */; };
+		88EAA17E1C5864D900E761F9 /* FBSDKShareOpenGraphAction.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1501C5864D800E761F9 /* FBSDKShareOpenGraphAction.ios.js */; };
+		88EAA17F1C5864D900E761F9 /* FBSDKShareOpenGraphContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1511C5864D800E761F9 /* FBSDKShareOpenGraphContent.ios.js */; };
+		88EAA1801C5864D900E761F9 /* FBSDKShareOpenGraphObject.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1521C5864D800E761F9 /* FBSDKShareOpenGraphObject.ios.js */; };
+		88EAA1811C5864D900E761F9 /* FBSDKShareOpenGraphValueContainer.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1531C5864D800E761F9 /* FBSDKShareOpenGraphValueContainer.ios.js */; };
+		88EAA1821C5864D900E761F9 /* FBSDKSharePhoto.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1541C5864D800E761F9 /* FBSDKSharePhoto.ios.js */; };
+		88EAA1831C5864D900E761F9 /* FBSDKSharePhotoContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1551C5864D800E761F9 /* FBSDKSharePhotoContent.ios.js */; };
+		88EAA1841C5864D900E761F9 /* FBSDKShareVideo.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1561C5864D800E761F9 /* FBSDKShareVideo.ios.js */; };
+		88EAA1851C5864D900E761F9 /* FBSDKShareVideoContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1571C5864D800E761F9 /* FBSDKShareVideoContent.ios.js */; };
+		88EAA1861C5864D900E761F9 /* FBSDKSharingContent.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1581C5864D800E761F9 /* FBSDKSharingContent.ios.js */; };
+		88EAA1871C5864D900E761F9 /* FBSDKLikeControl.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA15A1C5864D800E761F9 /* FBSDKLikeControl.ios.js */; };
+		88EAA1881C5864D900E761F9 /* FBSDKSendButton.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA15B1C5864D800E761F9 /* FBSDKSendButton.ios.js */; };
+		88EAA1891C5864D900E761F9 /* FBSDKShareButton.ios.js in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA15C1C5864D800E761F9 /* FBSDKShareButton.ios.js */; };
+		88EAA18A1C5864D900E761F9 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA15D1C5864D800E761F9 /* LICENSE.txt */; };
+		88EAA18B1C5864D900E761F9 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA15E1C5864D800E761F9 /* package.json */; };
+		88EAA18C1C5864D900E761F9 /* react-native-fbsdkshare.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 88EAA1621C5864D900E761F9 /* react-native-fbsdkshare.podspec */; };
+		88EAA18D1C5864D900E761F9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 88EAA1631C5864D900E761F9 /* README.md */; };
+		88EAA1911C58654B00E761F9 /* libRCTFBSDKLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EAA1141C5864AD00E761F9 /* libRCTFBSDKLogin.a */; };
+		88EAA1921C58655300E761F9 /* libRCTFBSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EAA1251C5864C400E761F9 /* libRCTFBSDKCore.a */; };
+		88EAA1971C58665F00E761F9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EAA1941C58665F00E761F9 /* FBSDKCoreKit.framework */; };
+		88EAA1981C58665F00E761F9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EAA1951C58665F00E761F9 /* FBSDKLoginKit.framework */; };
+		88EAA1991C58665F00E761F9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EAA1961C58665F00E761F9 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,19 +167,33 @@
 			remoteGlobalIDString = 2F5A3EB81ACDBF8000439386;
 			remoteInfo = ReactNativeIcons;
 		};
-		885DFA4E1C531A02005D5E93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 885DFA4A1C531A02005D5E93 /* RNSearchBar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNSearchBar;
-		};
 		885DFA551C5343EB005D5E93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 885DFA511C5343EB005D5E93 /* RCTCamera.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
 			remoteInfo = RCTCamera;
+		};
+		88EAA1131C5864AD00E761F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88EAA10D1C5864AD00E761F9 /* RCTFBSDKLogin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTFBSDKLogin;
+		};
+		88EAA1241C5864C400E761F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88EAA1201C5864C400E761F9 /* RCTFBSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTFBSDKCore;
+		};
+		88EAA18F1C5864D900E761F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88EAA15F1C5864D800E761F9 /* RCTFBSDKShare.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTFBSDKShare;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -167,10 +227,69 @@
 		885DFA431C530E64005D5E93 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/FontAwesome.otf"; sourceTree = "<group>"; };
 		885DFA441C530E64005D5E93 /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
 		885DFA451C530E64005D5E93 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/ionicons.ttf"; sourceTree = "<group>"; };
-		885DFA4A1C531A02005D5E93 /* RNSearchBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSearchBar.xcodeproj; path = "../node_modules/react-native-search-bar/RNSearchBar.xcodeproj"; sourceTree = "<group>"; };
 		885DFA511C5343EB005D5E93 /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		88A700C81C4CA28E00B67FE7 /* Avenir Next.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir Next.ttc"; path = "../../../../../Volumes/Data/Users/robertgreenfield/Desktop/Nomsy App UI/Avenir Next.ttc"; sourceTree = "<group>"; };
 		88A700CA1C4CA29800B67FE7 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Avenir.ttc; path = ../../../../../System/Library/Fonts/Avenir.ttc; sourceTree = "<group>"; };
+		88EAA10D1C5864AD00E761F9 /* RCTFBSDKLogin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTFBSDKLogin.xcodeproj; path = "../node_modules/react-native-fbsdklogin/RCTFBSDKLogin.xcodeproj"; sourceTree = "<group>"; };
+		88EAA1201C5864C400E761F9 /* RCTFBSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTFBSDKCore.xcodeproj; path = "../node_modules/react-native-fbsdkcore/RCTFBSDKCore.xcodeproj"; sourceTree = "<group>"; };
+		88EAA1271C5864D800E761F9 /* FBSDKShare.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShare.ios.js; sourceTree = "<group>"; };
+		88EAA1291C5864D800E761F9 /* RCTConvert+FBSDKSharingContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+FBSDKSharingContent.h"; sourceTree = "<group>"; };
+		88EAA12A1C5864D800E761F9 /* RCTConvert+FBSDKSharingContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+FBSDKSharingContent.m"; sourceTree = "<group>"; };
+		88EAA12B1C5864D800E761F9 /* RCTFBSDKAppGroupAddDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKAppGroupAddDialog.h; sourceTree = "<group>"; };
+		88EAA12C1C5864D800E761F9 /* RCTFBSDKAppGroupAddDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKAppGroupAddDialog.m; sourceTree = "<group>"; };
+		88EAA12D1C5864D800E761F9 /* RCTFBSDKAppGroupJoinDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKAppGroupJoinDialog.h; sourceTree = "<group>"; };
+		88EAA12E1C5864D800E761F9 /* RCTFBSDKAppGroupJoinDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKAppGroupJoinDialog.m; sourceTree = "<group>"; };
+		88EAA12F1C5864D800E761F9 /* RCTFBSDKAppInviteDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKAppInviteDialog.h; sourceTree = "<group>"; };
+		88EAA1301C5864D800E761F9 /* RCTFBSDKAppInviteDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKAppInviteDialog.m; sourceTree = "<group>"; };
+		88EAA1311C5864D800E761F9 /* RCTFBSDKGameRequestDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKGameRequestDialog.h; sourceTree = "<group>"; };
+		88EAA1321C5864D800E761F9 /* RCTFBSDKGameRequestDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKGameRequestDialog.m; sourceTree = "<group>"; };
+		88EAA1331C5864D800E761F9 /* RCTFBSDKLikeControlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKLikeControlManager.h; sourceTree = "<group>"; };
+		88EAA1341C5864D800E761F9 /* RCTFBSDKLikeControlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKLikeControlManager.m; sourceTree = "<group>"; };
+		88EAA1351C5864D800E761F9 /* RCTFBSDKMessageDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKMessageDialog.h; sourceTree = "<group>"; };
+		88EAA1361C5864D800E761F9 /* RCTFBSDKMessageDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKMessageDialog.m; sourceTree = "<group>"; };
+		88EAA1371C5864D800E761F9 /* RCTFBSDKSendButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKSendButtonManager.h; sourceTree = "<group>"; };
+		88EAA1381C5864D800E761F9 /* RCTFBSDKSendButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKSendButtonManager.m; sourceTree = "<group>"; };
+		88EAA1391C5864D800E761F9 /* RCTFBSDKShareAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKShareAPI.h; sourceTree = "<group>"; };
+		88EAA13A1C5864D800E761F9 /* RCTFBSDKShareAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKShareAPI.m; sourceTree = "<group>"; };
+		88EAA13B1C5864D800E761F9 /* RCTFBSDKShareButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKShareButtonManager.h; sourceTree = "<group>"; };
+		88EAA13C1C5864D800E761F9 /* RCTFBSDKShareButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKShareButtonManager.m; sourceTree = "<group>"; };
+		88EAA13D1C5864D800E761F9 /* RCTFBSDKShareDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKShareDialog.h; sourceTree = "<group>"; };
+		88EAA13E1C5864D800E761F9 /* RCTFBSDKShareDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKShareDialog.m; sourceTree = "<group>"; };
+		88EAA13F1C5864D800E761F9 /* RCTFBSDKShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTFBSDKShareHelper.h; sourceTree = "<group>"; };
+		88EAA1401C5864D800E761F9 /* RCTFBSDKShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKShareHelper.m; sourceTree = "<group>"; };
+		88EAA1411C5864D800E761F9 /* RCTFBSDKShareInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTFBSDKShareInitializer.m; sourceTree = "<group>"; };
+		88EAA1431C5864D800E761F9 /* FBSDKAppGroupAddDialog.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKAppGroupAddDialog.ios.js; sourceTree = "<group>"; };
+		88EAA1441C5864D800E761F9 /* FBSDKAppGroupJoinDialog.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKAppGroupJoinDialog.ios.js; sourceTree = "<group>"; };
+		88EAA1451C5864D800E761F9 /* FBSDKAppInviteDialog.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKAppInviteDialog.ios.js; sourceTree = "<group>"; };
+		88EAA1461C5864D800E761F9 /* FBSDKGameRequestDialog.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKGameRequestDialog.ios.js; sourceTree = "<group>"; };
+		88EAA1471C5864D800E761F9 /* FBSDKMessageDialog.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKMessageDialog.ios.js; sourceTree = "<group>"; };
+		88EAA1481C5864D800E761F9 /* FBSDKShareAPI.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareAPI.ios.js; sourceTree = "<group>"; };
+		88EAA1491C5864D800E761F9 /* FBSDKShareDialog.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareDialog.ios.js; sourceTree = "<group>"; };
+		88EAA14A1C5864D800E761F9 /* FBSDKShareTypes.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareTypes.ios.js; sourceTree = "<group>"; };
+		88EAA14C1C5864D800E761F9 /* FBSDKAppGroupAddContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKAppGroupAddContent.ios.js; sourceTree = "<group>"; };
+		88EAA14D1C5864D800E761F9 /* FBSDKAppInviteContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKAppInviteContent.ios.js; sourceTree = "<group>"; };
+		88EAA14E1C5864D800E761F9 /* FBSDKGameRequestContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKGameRequestContent.ios.js; sourceTree = "<group>"; };
+		88EAA14F1C5864D800E761F9 /* FBSDKShareLinkContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareLinkContent.ios.js; sourceTree = "<group>"; };
+		88EAA1501C5864D800E761F9 /* FBSDKShareOpenGraphAction.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareOpenGraphAction.ios.js; sourceTree = "<group>"; };
+		88EAA1511C5864D800E761F9 /* FBSDKShareOpenGraphContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareOpenGraphContent.ios.js; sourceTree = "<group>"; };
+		88EAA1521C5864D800E761F9 /* FBSDKShareOpenGraphObject.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareOpenGraphObject.ios.js; sourceTree = "<group>"; };
+		88EAA1531C5864D800E761F9 /* FBSDKShareOpenGraphValueContainer.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareOpenGraphValueContainer.ios.js; sourceTree = "<group>"; };
+		88EAA1541C5864D800E761F9 /* FBSDKSharePhoto.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKSharePhoto.ios.js; sourceTree = "<group>"; };
+		88EAA1551C5864D800E761F9 /* FBSDKSharePhotoContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKSharePhotoContent.ios.js; sourceTree = "<group>"; };
+		88EAA1561C5864D800E761F9 /* FBSDKShareVideo.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareVideo.ios.js; sourceTree = "<group>"; };
+		88EAA1571C5864D800E761F9 /* FBSDKShareVideoContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareVideoContent.ios.js; sourceTree = "<group>"; };
+		88EAA1581C5864D800E761F9 /* FBSDKSharingContent.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKSharingContent.ios.js; sourceTree = "<group>"; };
+		88EAA15A1C5864D800E761F9 /* FBSDKLikeControl.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKLikeControl.ios.js; sourceTree = "<group>"; };
+		88EAA15B1C5864D800E761F9 /* FBSDKSendButton.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKSendButton.ios.js; sourceTree = "<group>"; };
+		88EAA15C1C5864D800E761F9 /* FBSDKShareButton.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBSDKShareButton.ios.js; sourceTree = "<group>"; };
+		88EAA15D1C5864D800E761F9 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		88EAA15E1C5864D800E761F9 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		88EAA15F1C5864D800E761F9 /* RCTFBSDKShare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RCTFBSDKShare.xcodeproj; sourceTree = "<group>"; };
+		88EAA1621C5864D900E761F9 /* react-native-fbsdkshare.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "react-native-fbsdkshare.podspec"; sourceTree = "<group>"; };
+		88EAA1631C5864D900E761F9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		88EAA1941C58665F00E761F9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		88EAA1951C58665F00E761F9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		88EAA1961C58665F00E761F9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EAA1981C58665F00E761F9 /* FBSDKLoginKit.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -192,10 +312,13 @@
 				885DFA331C530D09005D5E93 /* libReactNativeIcons.a in Frameworks */,
 				885DFA571C5343F1005D5E93 /* libRCTCamera.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
+				88EAA1911C58654B00E761F9 /* libRCTFBSDKLogin.a in Frameworks */,
+				88EAA1921C58655300E761F9 /* libRCTFBSDKCore.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
-				885DFA501C531A0B005D5E93 /* libRNSearchBar.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				88EAA1991C58665F00E761F9 /* FBSDKShareKit.framework in Frameworks */,
+				88EAA1971C58665F00E761F9 /* FBSDKCoreKit.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 			);
@@ -310,8 +433,10 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				88EAA1261C5864D800E761F9 /* react-native-fbsdkshare */,
+				88EAA1201C5864C400E761F9 /* RCTFBSDKCore.xcodeproj */,
+				88EAA10D1C5864AD00E761F9 /* RCTFBSDKLogin.xcodeproj */,
 				885DFA511C5343EB005D5E93 /* RCTCamera.xcodeproj */,
-				885DFA4A1C531A02005D5E93 /* RNSearchBar.xcodeproj */,
 				885DFA231C530CFD005D5E93 /* ReactNativeIcons.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -338,6 +463,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				88EAA1931C58660A00E761F9 /* Frameworks */,
 				88A700BD1C4CA24D00B67FE7 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* nomsyapp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -365,14 +491,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		885DFA4B1C531A02005D5E93 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				885DFA4F1C531A02005D5E93 /* libRNSearchBar.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		885DFA521C5343EB005D5E93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +513,135 @@
 				88A700CA1C4CA29800B67FE7 /* Avenir.ttc */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		88EAA10E1C5864AD00E761F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA1141C5864AD00E761F9 /* libRCTFBSDKLogin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88EAA1211C5864C400E761F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA1251C5864C400E761F9 /* libRCTFBSDKCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88EAA1261C5864D800E761F9 /* react-native-fbsdkshare */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA1271C5864D800E761F9 /* FBSDKShare.ios.js */,
+				88EAA1281C5864D800E761F9 /* iOS */,
+				88EAA1421C5864D800E761F9 /* js */,
+				88EAA15D1C5864D800E761F9 /* LICENSE.txt */,
+				88EAA15E1C5864D800E761F9 /* package.json */,
+				88EAA15F1C5864D800E761F9 /* RCTFBSDKShare.xcodeproj */,
+				88EAA1621C5864D900E761F9 /* react-native-fbsdkshare.podspec */,
+				88EAA1631C5864D900E761F9 /* README.md */,
+			);
+			name = "react-native-fbsdkshare";
+			path = "../node_modules/react-native-fbsdkshare";
+			sourceTree = "<group>";
+		};
+		88EAA1281C5864D800E761F9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA1291C5864D800E761F9 /* RCTConvert+FBSDKSharingContent.h */,
+				88EAA12A1C5864D800E761F9 /* RCTConvert+FBSDKSharingContent.m */,
+				88EAA12B1C5864D800E761F9 /* RCTFBSDKAppGroupAddDialog.h */,
+				88EAA12C1C5864D800E761F9 /* RCTFBSDKAppGroupAddDialog.m */,
+				88EAA12D1C5864D800E761F9 /* RCTFBSDKAppGroupJoinDialog.h */,
+				88EAA12E1C5864D800E761F9 /* RCTFBSDKAppGroupJoinDialog.m */,
+				88EAA12F1C5864D800E761F9 /* RCTFBSDKAppInviteDialog.h */,
+				88EAA1301C5864D800E761F9 /* RCTFBSDKAppInviteDialog.m */,
+				88EAA1311C5864D800E761F9 /* RCTFBSDKGameRequestDialog.h */,
+				88EAA1321C5864D800E761F9 /* RCTFBSDKGameRequestDialog.m */,
+				88EAA1331C5864D800E761F9 /* RCTFBSDKLikeControlManager.h */,
+				88EAA1341C5864D800E761F9 /* RCTFBSDKLikeControlManager.m */,
+				88EAA1351C5864D800E761F9 /* RCTFBSDKMessageDialog.h */,
+				88EAA1361C5864D800E761F9 /* RCTFBSDKMessageDialog.m */,
+				88EAA1371C5864D800E761F9 /* RCTFBSDKSendButtonManager.h */,
+				88EAA1381C5864D800E761F9 /* RCTFBSDKSendButtonManager.m */,
+				88EAA1391C5864D800E761F9 /* RCTFBSDKShareAPI.h */,
+				88EAA13A1C5864D800E761F9 /* RCTFBSDKShareAPI.m */,
+				88EAA13B1C5864D800E761F9 /* RCTFBSDKShareButtonManager.h */,
+				88EAA13C1C5864D800E761F9 /* RCTFBSDKShareButtonManager.m */,
+				88EAA13D1C5864D800E761F9 /* RCTFBSDKShareDialog.h */,
+				88EAA13E1C5864D800E761F9 /* RCTFBSDKShareDialog.m */,
+				88EAA13F1C5864D800E761F9 /* RCTFBSDKShareHelper.h */,
+				88EAA1401C5864D800E761F9 /* RCTFBSDKShareHelper.m */,
+				88EAA1411C5864D800E761F9 /* RCTFBSDKShareInitializer.m */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		88EAA1421C5864D800E761F9 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA1431C5864D800E761F9 /* FBSDKAppGroupAddDialog.ios.js */,
+				88EAA1441C5864D800E761F9 /* FBSDKAppGroupJoinDialog.ios.js */,
+				88EAA1451C5864D800E761F9 /* FBSDKAppInviteDialog.ios.js */,
+				88EAA1461C5864D800E761F9 /* FBSDKGameRequestDialog.ios.js */,
+				88EAA1471C5864D800E761F9 /* FBSDKMessageDialog.ios.js */,
+				88EAA1481C5864D800E761F9 /* FBSDKShareAPI.ios.js */,
+				88EAA1491C5864D800E761F9 /* FBSDKShareDialog.ios.js */,
+				88EAA14A1C5864D800E761F9 /* FBSDKShareTypes.ios.js */,
+				88EAA14B1C5864D800E761F9 /* models */,
+				88EAA1591C5864D800E761F9 /* ui */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		88EAA14B1C5864D800E761F9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA14C1C5864D800E761F9 /* FBSDKAppGroupAddContent.ios.js */,
+				88EAA14D1C5864D800E761F9 /* FBSDKAppInviteContent.ios.js */,
+				88EAA14E1C5864D800E761F9 /* FBSDKGameRequestContent.ios.js */,
+				88EAA14F1C5864D800E761F9 /* FBSDKShareLinkContent.ios.js */,
+				88EAA1501C5864D800E761F9 /* FBSDKShareOpenGraphAction.ios.js */,
+				88EAA1511C5864D800E761F9 /* FBSDKShareOpenGraphContent.ios.js */,
+				88EAA1521C5864D800E761F9 /* FBSDKShareOpenGraphObject.ios.js */,
+				88EAA1531C5864D800E761F9 /* FBSDKShareOpenGraphValueContainer.ios.js */,
+				88EAA1541C5864D800E761F9 /* FBSDKSharePhoto.ios.js */,
+				88EAA1551C5864D800E761F9 /* FBSDKSharePhotoContent.ios.js */,
+				88EAA1561C5864D800E761F9 /* FBSDKShareVideo.ios.js */,
+				88EAA1571C5864D800E761F9 /* FBSDKShareVideoContent.ios.js */,
+				88EAA1581C5864D800E761F9 /* FBSDKSharingContent.ios.js */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		88EAA1591C5864D800E761F9 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA15A1C5864D800E761F9 /* FBSDKLikeControl.ios.js */,
+				88EAA15B1C5864D800E761F9 /* FBSDKSendButton.ios.js */,
+				88EAA15C1C5864D800E761F9 /* FBSDKShareButton.ios.js */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		88EAA1601C5864D800E761F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA1901C5864D900E761F9 /* libRCTFBSDKShare.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88EAA1931C58660A00E761F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88EAA1941C58665F00E761F9 /* FBSDKCoreKit.framework */,
+				88EAA1951C58665F00E761F9 /* FBSDKLoginKit.framework */,
+				88EAA1961C58665F00E761F9 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +719,18 @@
 					ProjectRef = 885DFA511C5343EB005D5E93 /* RCTCamera.xcodeproj */;
 				},
 				{
+					ProductGroup = 88EAA1211C5864C400E761F9 /* Products */;
+					ProjectRef = 88EAA1201C5864C400E761F9 /* RCTFBSDKCore.xcodeproj */;
+				},
+				{
+					ProductGroup = 88EAA10E1C5864AD00E761F9 /* Products */;
+					ProjectRef = 88EAA10D1C5864AD00E761F9 /* RCTFBSDKLogin.xcodeproj */;
+				},
+				{
+					ProductGroup = 88EAA1601C5864D800E761F9 /* Products */;
+					ProjectRef = 88EAA15F1C5864D800E761F9 /* RCTFBSDKShare.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
 					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
 				},
@@ -510,10 +769,6 @@
 				{
 					ProductGroup = 885DFA241C530CFD005D5E93 /* Products */;
 					ProjectRef = 885DFA231C530CFD005D5E93 /* ReactNativeIcons.xcodeproj */;
-				},
-				{
-					ProductGroup = 885DFA4B1C531A02005D5E93 /* Products */;
-					ProjectRef = 885DFA4A1C531A02005D5E93 /* RNSearchBar.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -602,18 +857,32 @@
 			remoteRef = 885DFA311C530CFD005D5E93 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		885DFA4F1C531A02005D5E93 /* libRNSearchBar.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNSearchBar.a;
-			remoteRef = 885DFA4E1C531A02005D5E93 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		885DFA561C5343EB005D5E93 /* libRCTCamera.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRCTCamera.a;
 			remoteRef = 885DFA551C5343EB005D5E93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88EAA1141C5864AD00E761F9 /* libRCTFBSDKLogin.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTFBSDKLogin.a;
+			remoteRef = 88EAA1131C5864AD00E761F9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88EAA1251C5864C400E761F9 /* libRCTFBSDKCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTFBSDKCore.a;
+			remoteRef = 88EAA1241C5864C400E761F9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88EAA1901C5864D900E761F9 /* libRCTFBSDKShare.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTFBSDKShare.a;
+			remoteRef = 88EAA18F1C5864D900E761F9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -631,16 +900,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				885DFA461C530E64005D5E93 /* octicons.ttf in Resources */,
+				88EAA1841C5864D900E761F9 /* FBSDKShareVideo.ios.js in Resources */,
+				88EAA1801C5864D900E761F9 /* FBSDKShareOpenGraphObject.ios.js in Resources */,
+				88EAA1861C5864D900E761F9 /* FBSDKSharingContent.ios.js in Resources */,
+				88EAA18B1C5864D900E761F9 /* package.json in Resources */,
 				885DFA471C530E64005D5E93 /* FontAwesome.otf in Resources */,
+				88EAA1731C5864D900E761F9 /* FBSDKAppGroupJoinDialog.ios.js in Resources */,
+				88EAA18C1C5864D900E761F9 /* react-native-fbsdkshare.podspec in Resources */,
+				88EAA17A1C5864D900E761F9 /* FBSDKAppGroupAddContent.ios.js in Resources */,
+				88EAA1871C5864D900E761F9 /* FBSDKLikeControl.ios.js in Resources */,
+				88EAA1831C5864D900E761F9 /* FBSDKSharePhotoContent.ios.js in Resources */,
+				88EAA17C1C5864D900E761F9 /* FBSDKGameRequestContent.ios.js in Resources */,
 				885DFA481C530E64005D5E93 /* foundation-icons.ttf in Resources */,
 				885DFA491C530E64005D5E93 /* ionicons.ttf in Resources */,
+				88EAA1891C5864D900E761F9 /* FBSDKShareButton.ios.js in Resources */,
+				88EAA17F1C5864D900E761F9 /* FBSDKShareOpenGraphContent.ios.js in Resources */,
 				88A700CB1C4CA29800B67FE7 /* Avenir.ttc in Resources */,
+				88EAA17B1C5864D900E761F9 /* FBSDKAppInviteContent.ios.js in Resources */,
+				88EAA1881C5864D900E761F9 /* FBSDKSendButton.ios.js in Resources */,
+				88EAA17E1C5864D900E761F9 /* FBSDKShareOpenGraphAction.ios.js in Resources */,
+				88EAA1741C5864D900E761F9 /* FBSDKAppInviteDialog.ios.js in Resources */,
+				88EAA1811C5864D900E761F9 /* FBSDKShareOpenGraphValueContainer.ios.js in Resources */,
+				88EAA1851C5864D900E761F9 /* FBSDKShareVideoContent.ios.js in Resources */,
 				885DFA411C530D40005D5E93 /* zocial.ttf in Resources */,
+				88EAA1641C5864D900E761F9 /* FBSDKShare.ios.js in Resources */,
 				88A700C91C4CA28E00B67FE7 /* Avenir Next.ttc in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				88EAA17D1C5864D900E761F9 /* FBSDKShareLinkContent.ios.js in Resources */,
+				88EAA1721C5864D900E761F9 /* FBSDKAppGroupAddDialog.ios.js in Resources */,
 				885DFA3F1C530D40005D5E93 /* Material-Design-Iconic-Font.ttf in Resources */,
+				88EAA1821C5864D900E761F9 /* FBSDKSharePhoto.ios.js in Resources */,
+				88EAA1771C5864D900E761F9 /* FBSDKShareAPI.ios.js in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				88EAA1751C5864D900E761F9 /* FBSDKGameRequestDialog.ios.js in Resources */,
+				88EAA1791C5864D900E761F9 /* FBSDKShareTypes.ios.js in Resources */,
+				88EAA18A1C5864D900E761F9 /* LICENSE.txt in Resources */,
 				885DFA401C530D40005D5E93 /* typicons.ttf in Resources */,
+				88EAA1761C5864D900E761F9 /* FBSDKMessageDialog.ios.js in Resources */,
+				88EAA1781C5864D900E761F9 /* FBSDKShareDialog.ios.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,8 +973,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EAA16B1C5864D900E761F9 /* RCTFBSDKMessageDialog.m in Sources */,
+				88EAA1661C5864D900E761F9 /* RCTFBSDKAppGroupAddDialog.m in Sources */,
+				88EAA16D1C5864D900E761F9 /* RCTFBSDKShareAPI.m in Sources */,
+				88EAA1651C5864D900E761F9 /* RCTConvert+FBSDKSharingContent.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				88EAA16C1C5864D900E761F9 /* RCTFBSDKSendButtonManager.m in Sources */,
+				88EAA18D1C5864D900E761F9 /* README.md in Sources */,
+				88EAA1711C5864D900E761F9 /* RCTFBSDKShareInitializer.m in Sources */,
+				88EAA16A1C5864D900E761F9 /* RCTFBSDKLikeControlManager.m in Sources */,
+				88EAA1681C5864D900E761F9 /* RCTFBSDKAppInviteDialog.m in Sources */,
+				88EAA1701C5864D900E761F9 /* RCTFBSDKShareHelper.m in Sources */,
+				88EAA16E1C5864D900E761F9 /* RCTFBSDKShareButtonManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				88EAA16F1C5864D900E761F9 /* RCTFBSDKShareDialog.m in Sources */,
+				88EAA1691C5864D900E761F9 /* RCTFBSDKGameRequestDialog.m in Sources */,
+				88EAA1671C5864D900E761F9 /* RCTFBSDKAppGroupJoinDialog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +1059,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-facebook-login/FacebookSDK";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -767,6 +1079,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-facebook-login/FacebookSDK";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

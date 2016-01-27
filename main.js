@@ -22,7 +22,7 @@ var ROUTES ={
 
 module.exports = React.createClass({
 	componentWillMount: function() {
-		Parse.initialize("D8ABr0HCaDtGeCIYeJjd0UkrGNKQD9evz3QuK3t7", "pHq86yleHd97lyY02QRdihMPQcHjwOJnkXYZ41nV");
+		Parse.initialize("MgcGtKvMgpIcjXW0M9N7c2YUfnlFDeArBaDY3LI8", "piGf6r883OY2Rok9N7ab6zHJxieYPain0zK4c9DD");
 	},
 	renderScene: function(route, navigator) {
 		//when navigator is initially shown it has to render initial route
