@@ -24,18 +24,18 @@ module.exports = React.createClass({
             resizeMode={'contain'} />
           <View style={styles.restaurantDetails}>
             <Text style={styles.restaurantTitle}>{this.props.title}</Text>
-            <Text style={styles.restaurantDetails}>{this.props.address}</Text>
+            <Text style={styles.restaurantAddress}>{this.props.address}</Text>
+            <View style={styles.keywordSpan}>
+              {this.getKeywords(this.props.diets)}
+            </View>
             <View style={styles.restaurantDietRow}>
-              <View style={styles.keywordSpan}>
-                {this.getKeywords(this.props.diet, this.props.dimension)}
-              </View>
               <View style={styles.votes}>
                 <UpVote
                   onPress={this.props.upVotePress}
                   voteCount={this.props.voteCountUp} />
                 <DownVote
-                onPress={this.props.downVotePress}
-                voteCount={this.props.voteCountDown} />
+                  onPress={this.props.downVotePress}
+                  voteCount={this.props.voteCountDown} />
               </View>
             </View>
           </View>
@@ -43,12 +43,17 @@ module.exports = React.createClass({
       </View>
     );
   },
-  getKeywords: function(diet, dimension) {
-      return <CategoryBox
-        onPress={}
+  getKeywords: function(diets) {
+    var that = this;
+    return diets.map(function(diet, i) {
+
+			return <CategoryBox
+        onPress={that.props.dietPress}
+        style={{marginLeft: 5, marginRight: 5}}
         key={i}
-        dimension={dimension}
-        boxText={diet} />
+        length={diets.length}
+        boxText={diets[i]} />
+		});
   },
   border: function(color) {
     return {
@@ -62,19 +67,34 @@ var styles = StyleSheet.create({
   restaurantDietRow: {
     flexDirection: 'row',
   },
+  restaurantImage: {
+    width: window.width/2,
+    height: window.width/2,
+  },
+  restaurantAddress: {
+    fontSize: 10,
+    fontFamily: 'Avenir Next',
+    textAlign: 'left',
+    color: 'black',
+  },
   votes: {
-    flex: 1
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    alignSelf: 'center', 
   },
   keywordSpan: {
     flexWrap: 'wrap',
 		alignItems: 'flex-start',
 		flexDirection:'row',
     flex: 2,
+    paddingTop: 5,
   },
   restaurantTitle: {
-    fontSize: 15,
+    fontSize: 13,
     fontFamily: 'Avenir Next',
     textAlign: 'left',
+    color: 'black',
   },
   restaurantText: {
     fontSize: 12,
@@ -86,11 +106,15 @@ var styles = StyleSheet.create({
     width: window.width/2.3,
     height:window.width/2.3,
   },
+  restaurantDietRow: {
+    paddingLeft: 5,
+  },
   restaurantDetails: {
     flex: 0.5,
     width: window.width/2.3,
     height:window.width/2.3,
     flexDirection: 'column',
+    padding: 5,
   },
   touchCard: {
     margin: 3,
@@ -105,5 +129,6 @@ var styles = StyleSheet.create({
     width: window.width*0.98,
     alignSelf:'center',
     flexDirection: 'row',
+    backgroundColor: '#F0F0F0',
   },
 });

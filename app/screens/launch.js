@@ -12,8 +12,6 @@ var Modal = require('react-native-modalbox');
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
 
-
-
 module.exports = React.createClass({
   getInitialState: function() {
 		return {
@@ -166,16 +164,20 @@ module.exports = React.createClass({
   this.refs.modal1.close();
   },
   onSignInPress: function() {
-    Parse.User.logIn(this.state.username, this.state.password, {
+    this.props.navigator.immediatelyResetRouteStack([{ name: 'home'}]);
+    /*
+    var that = this;
+    Parse.User.logIn(that.state.username, that.state.password, {
       success: (user) => {
         console.log('Successful Sign in!');
-        this.props.navigator.immediatelyResetRouteStack([{ name: 'home'}]);
+        that.props.navigator.immediatelyResetRouteStack([{ name: 'home'}]);
       },
       error: (data, error) => {
         console.log('Unsuccessful Sign in!');
-        this.setState({ errorMessage: error.message });
+        that.setState({ errorMessage: error.message });
       }
-  });
+    });
+    */
   },
   openModal1: function(id) {
     this.refs.modal1.open();

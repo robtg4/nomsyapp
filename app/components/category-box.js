@@ -9,7 +9,7 @@ module.exports = React.createClass({
 	render: function() {
 		return (
 			<TouchableHighlight
-				style={[this.categoryBox(this.props.dimension)]}
+				style={this.categoryBox(this.props.length, this.props.key)}
 				onPress={this.props.onPress}
 				key={this.props.key}
 				underlayColor={'transparent'} >
@@ -17,14 +17,28 @@ module.exports = React.createClass({
 			</TouchableHighlight>
 		);
 	},
-  categoryBox: function(dimension) {
-    return {
-      width: dimension,
-      height: dimension*(2/5),
-      borderColor: '#55C066',
-      borderWidth: 1,
-    }
-  },
+	categoryBox: function(length, i) {
+		if (i == 1) {
+			return {
+				padding: 2,
+				marginLeft: 5,
+				marginRight: 5,
+				marginBottom: 2, 
+				backgroundColor: '#55C066',
+				borderColor: '#55C066',
+		    borderWidth: 1,
+			}
+		} else {
+			return {
+				padding: 2,
+				marginRight: 5,
+				marginBottom: 2,
+				backgroundColor: '#55C066',
+				borderColor: '#55C066',
+		    borderWidth: 1,
+			}
+		}
+	},
   border: function(color) {
 	    return {
 	      //borderColor: color,
@@ -38,7 +52,9 @@ var styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: 8,
+    fontSize: 12,
+		fontWeight: 'bold',
     fontFamily: 'Avenir Next',
+		color: 'white',
   }
 });

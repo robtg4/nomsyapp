@@ -5,13 +5,13 @@ var {Text, View, StyleSheet, Image, TouchableHighlight} = React;
 var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
 //libraries
-var { Icon } = require('react-native-icons');
 //components
 
 
 module.exports = React.createClass({
   render: function() {
     return <TouchableHighlight
+      style={[styles.arrow, {flex: 1}]}
       underlayColor={'transparent'}
       onPress={this.props.onPress}>
       <Image
@@ -23,8 +23,8 @@ module.exports = React.createClass({
   },
   border: function(color) {
     return {
-      borderColor: color,
-      borderWidth: 2,
+    //  borderColor: color,
+      //borderWidth: 2,
     }
   },
 });
@@ -34,11 +34,14 @@ var styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: 8,
+    fontSize: 10,
+    paddingTop: 4,
     fontFamily: 'Avenir Next',
+    color: 'white',
+    fontWeight: 'bold',
   },
   arrow: {
-    width: 15,
-    height: 15,
+    width: 32,
+    height: 20,
   },
 });
