@@ -77,7 +77,7 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    alignSelf: 'flex-end',
+    alignSelf: 'center',
     flex: 1,
     width: window.width/2.3,
   },
@@ -93,8 +93,8 @@ var styles = StyleSheet.create({
     fontFamily: 'Avenir Next',
     textAlign: 'left',
     color: 'black',
-    flex: 0.5,
     paddingBottom: 2,
+    flexWrap: 'wrap',
   },
   restaurantText: {
     fontSize: 12,
