@@ -11,7 +11,7 @@ var window = Dimensions.get('window');
 module.exports = React.createClass({
   render: function() {
     return <TouchableHighlight
-      style={[styles.arrow, {flex: 1}]}
+      style={[styles.arrow]}
       underlayColor={'transparent'}
       onPress={this.props.onPress}>
       <Image

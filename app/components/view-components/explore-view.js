@@ -22,21 +22,19 @@ module.exports = React.createClass({
             source={this.props.source}
             style={styles.restaurantImage}
             resizeMode={'contain'} />
-          <View style={styles.restaurantDetails}>
-            <Text style={styles.restaurantTitle}>{this.props.title}</Text>
-            <Text style={styles.restaurantAddress}>{this.props.address}</Text>
-            <View style={styles.keywordSpan}>
+          <View style={[styles.restaurantDetails, this.border('blue')]}>
+            <Text style={[styles.restaurantTitle, this.border('red')]}>{this.props.title + " " + this.props.cost}</Text>
+            <Text style={[styles.restaurantAddress, this.border('blue')]}>{this.props.address}</Text>
+            <View style={[styles.keywordSpan, this.border('red')]}>
               {this.getKeywords(this.props.diets)}
             </View>
-            <View style={styles.restaurantDietRow}>
-              <View style={styles.votes}>
-                <UpVote
-                  onPress={this.props.upVotePress}
-                  voteCount={this.props.voteCountUp} />
-                <DownVote
-                  onPress={this.props.downVotePress}
-                  voteCount={this.props.voteCountDown} />
-              </View>
+            <View style={[styles.votes, this.border('blue')]}>
+              <UpVote
+                onPress={this.props.upVotePress}
+                voteCount={this.props.voteCountUp} />
+              <DownVote
+                onPress={this.props.downVotePress}
+                voteCount={this.props.voteCountDown} />
             </View>
           </View>
         </View>
@@ -57,16 +55,13 @@ module.exports = React.createClass({
   },
   border: function(color) {
     return {
-      borderColor: color,
-      borderWidth: 2,
+    //  borderColor: color,
+    //  borderWidth: 2,
     }
   },
 });
 
 var styles = StyleSheet.create({
-  restaurantDietRow: {
-    flexDirection: 'row',
-  },
   restaurantImage: {
     width: window.width/2,
     height: window.width/2,
@@ -76,12 +71,15 @@ var styles = StyleSheet.create({
     fontFamily: 'Avenir Next',
     textAlign: 'left',
     color: 'black',
+    flex: 1,
   },
   votes: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    alignSelf: 'center', 
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    alignSelf: 'flex-end',
+    flex: 1,
+    width: window.width/2.3,
   },
   keywordSpan: {
     flexWrap: 'wrap',
@@ -95,6 +93,8 @@ var styles = StyleSheet.create({
     fontFamily: 'Avenir Next',
     textAlign: 'left',
     color: 'black',
+    flex: 0.5,
+    paddingBottom: 2,
   },
   restaurantText: {
     fontSize: 12,
@@ -107,14 +107,14 @@ var styles = StyleSheet.create({
     height:window.width/2.3,
   },
   restaurantDietRow: {
-    paddingLeft: 5,
+    paddingLeft: 2,
   },
   restaurantDetails: {
-    flex: 0.5,
+    flex: 1,
     width: window.width/2.3,
-    height:window.width/2.3,
     flexDirection: 'column',
     padding: 5,
+    height: window.width/2,
   },
   touchCard: {
     margin: 3,

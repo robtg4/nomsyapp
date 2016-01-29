@@ -11,7 +11,7 @@ var window = Dimensions.get('window');
 module.exports = React.createClass({
   render: function() {
     return <TouchableHighlight
-      style={[styles.arrow, {flex: 1}]}
+      style={[styles.arrow]}
       underlayColor={'transparent'}
       onPress={this.props.onPress}>
       <Image
@@ -34,8 +34,8 @@ var styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: 10,
-    paddingTop: 4,
+    fontSize: 9,
+    paddingTop: 7,
     fontFamily: 'Avenir Next',
     color: 'white',
     fontWeight: 'bold',
