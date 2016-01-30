@@ -129,6 +129,6 @@ var styles = StyleSheet.create({
     width: window.width*0.98,
     alignSelf:'center',
     flexDirection: 'row',
-    backgroundColor: '#F0F0F0',
+    backgroundColor: 'white',
   },
 });

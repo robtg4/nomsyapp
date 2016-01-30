@@ -1,6 +1,6 @@
 //explore places page
 var React = require('react-native');
-var { Text, Image, View, StyleSheet, ScrollView} = React;
+var { Text, Image, View, StyleSheet, ScrollView, ListView} = React;
 //libraries
 var NavigationBar = require('react-native-navbar');
 //dimensions
@@ -8,115 +8,58 @@ var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
 //components
 var ExploreView = require('../components/view-components/explore-view');
+var SampleData = require('../stores/sample-data');
 
 module.exports = React.createClass({
-  render: function() {
-    return <ScrollView
-        showsVerticalScrollIndicator={false}
-        centerContent={true}
-        contentContainerStyle={styles.container}>
-        <ExploreView
-          source={{uri: 'http://www.theurbanlist.com/content/article/wysiwyg/who-to-follow-on-instagram-foodies-mynewroots-Screen%20Shot%202014-06-19%20at%202.33.17%20PM-550x551.png'}}
-          title={'AA Vegan Soul'}
-          address={'550 South Main, Ann Arbor MI 48104'}
-          cost={'$$'}
-          diets={['Vegan', 'Gluten Free', 'Veggie']}
-          dietPress={() => {return null}}
-          upVotePress={() => {return null}}
-          voteCountUp={100}
-          downVotePress={() => {return null}}
-          voteCountDown={3}/>
-        <ExploreView
-          source={{uri: 'http://cdn.phillymag.com/wp-content/uploads/2014/04/donuts.png'}}
-          title={'Gluten Free Bakery Express'}
-          dietPress={() => {return null}}
-          cost={'$'}
-          address={'323 Packard St, Ann Arbor MI 48104'}
-          diets={['Gluten Free']}
-          upVotePress={() => {return null}}
-          voteCountUp={2}
-          downVotePress={() => {return null}}
-          voteCountDown={0} />
-        <ExploreView
-          source={{uri: 'https://s-media-cache-ak0.pinimg.com/736x/84/0f/51/840f51e8c608fdbcbe9b8fd148b85387.jpg'}}
-          title={'Fogo de Chao'}
-          cost={'$$$'}
-          address={'1313 South State St, Ann Arbor MI 48104'}
-          dietPress={() => {return null}}
-          diets={['Paleo']}
-          upVotePress={() => {return null}}
-          voteCountUp={58}
-          downVotePress={() => {return null}}
-          voteCountDown={2} />
-        <ExploreView
-          source={{uri: 'http://www.theurbanlist.com/content/article/wysiwyg/who-to-follow-on-instagram-foodies-mynewroots-Screen%20Shot%202014-06-19%20at%202.33.17%20PM-550x551.png'}}
-          title={'AA Vegan Soul'}
-          address={'550 South Main, Ann Arbor MI 48104'}
-          diets={['Vegan']}
-          cost={'$$'}
-          dietPress={() => {return null}}
-          upVotePress={() => {return null}}
-          voteCountUp={100}
-          downVotePress={() => {return null}}
-          voteCountDown={3} />
-        <ExploreView
-          source={{uri: 'http://cdn.phillymag.com/wp-content/uploads/2014/04/donuts.png'}}
-          title={'Gluten Free Bakery Express'}
-          dietPress={() => {return null}}
-          address={'323 Packard St, Ann Arbor MI 48104'}
-          diets={['Gluten Free']}
-          cost={'$'}
-          upVotePress={() => {return null}}
-          voteCountUp={2}
-          downVotePress={() => {return null}}
-          voteCountDown={0} />
-        <ExploreView
-          source={{uri: 'https://s-media-cache-ak0.pinimg.com/736x/84/0f/51/840f51e8c608fdbcbe9b8fd148b85387.jpg'}}
-          title={'Fogo de Chao'}
-          cost={'$$$$'}
-          address={'1313 South State St, Ann Arbor MI 48104'}
-          dietPress={() => {return null}}
-          diets={['Paleo']}
-          upVotePress={() => {return null}}
-          voteCountUp={58}
-          downVotePress={() => {return null}}
-          voteCountDown={2} />
-        <ExploreView
-          source={{uri: 'http://www.theurbanlist.com/content/article/wysiwyg/who-to-follow-on-instagram-foodies-mynewroots-Screen%20Shot%202014-06-19%20at%202.33.17%20PM-550x551.png'}}
-          title={'AA Vegan Soul'}
-          cost={'$$'}
-          address={'550 South Main, Ann Arbor MI 48104'}
-          diets={['Vegan', 'Dairy Free']}
-          dietPress={() => {return null}}
-          upVotePress={() => {return null}}
-          voteCountUp={100}
-          downVotePress={() => {return null}}
-          voteCountDown={3} />
-        <ExploreView
-          source={{uri: 'http://cdn.phillymag.com/wp-content/uploads/2014/04/donuts.png'}}
-          title={'Gluten Free Bakery Express'}
-          dietPress={() => {return null}}
-          cost={'$$'}
-          address={'323 Packard St, Ann Arbor MI 48104'}
-          diets={['Gluten Free', 'Vegan']}
-          upVotePress={() => {return null}}
-          voteCountUp={2}
-          downVotePress={() => {return null}}
-          voteCountDown={0} />
-        <ExploreView
-          source={{uri: 'https://s-media-cache-ak0.pinimg.com/736x/84/0f/51/840f51e8c608fdbcbe9b8fd148b85387.jpg'}}
-          title={'Fogo de Chao'}
-          cost={'$$$'}
-          address={'1313 South State St, Ann Arbor MI 48104'}
-          dietPress={() => {return null}}
-          diets={['Paleo']}
-          upVotePress={() => {return null}}
-          voteCountUp={58}
-          downVotePress={() => {return null}}
-          voteCountDown={2} />
-      </ScrollView>
+  componentDidMount: function() {
+    this.fetchData();
   },
-
+  getInitialState: function() {
+    return {
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (r1, r2) => r1 !== r2
+      }),
+      loaded: false,
+    };
+  },
+  render: function() {
+    return <View style={styles.container}>
+        <ListView
+          dataSource={this.state.dataSource}
+          renderScrollComponent={this._renderScroll}
+          renderRow={this._renderRow}>
+        </ListView>
+      </View>
+  },
+  fetchData: function() {
+    this.setState({
+       dataSource: this.state.dataSource.cloneWithRows(SampleData.data),
+       loaded: true,
+    });
+  },
+  _renderScroll: function() {
+    return (
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
+      />
+    );
+  },
+  _renderRow: function(object) {
+    return (
+      <ExploreView
+        source={{uri: object.url }}
+        title={object.title}
+        cost={object.cost}
+        address={object.address}
+        dietPress={() => {return null}}
+        diets={object.diets}
+        upVotePress={() => {return null}}
+        voteCountUp={object.voteCountUp}
+        downVotePress={() => {return null}}
+        voteCountDown={object.voteCountDown} />
+    );
+  },
 });
 
 var styles = StyleSheet.create({
@@ -125,5 +68,6 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: window.width,
+    backgroundColor: '#F0F0F0',
   }
 });

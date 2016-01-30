@@ -23,18 +23,20 @@ module.exports = React.createClass({
 				padding: 2,
 				marginLeft: 5,
 				marginRight: 5,
-				marginBottom: 2, 
-				backgroundColor: '#55C066',
-				borderColor: '#55C066',
+				marginBottom: 2,
+				borderRadius: 5,
+				backgroundColor: '#00CED1',
+				borderColor: '#00CED1',
 		    borderWidth: 1,
 			}
 		} else {
 			return {
 				padding: 2,
 				marginRight: 5,
+				borderRadius: 5,
 				marginBottom: 2,
-				backgroundColor: '#55C066',
-				borderColor: '#55C066',
+				backgroundColor: '#00CED1',
+				borderColor: '#00CED1',
 		    borderWidth: 1,
 			}
 		}
